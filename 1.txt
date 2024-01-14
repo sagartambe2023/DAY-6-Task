@@ -1,0 +1,41 @@
+class Movie{
+    constructor(title, studio, rating="PG"){
+        this.title=title;
+        this.studio=studio;
+        this.rating=rating;
+
+    }
+    
+    static getPG(movies){
+        let arr=[];
+        for(let i=0; i< movies.length; i++){
+            if(movies[i].rating==="PG"){
+                arr.push({
+                    title: movies[i].title,
+                    studio:movies[i].studio,
+                    rating: movies[i].rating
+                });
+            }
+        }
+        return arr
+    }
+}
+
+const ForestGump =new Movie("Forest Gump","Eon Production","PG13");
+const moviesArray =[
+    new Movie("Movie1","Studio 1","PG"),
+    new Movie("Movie2","Studio 2","R",),
+    new Movie("Movie3","Studio 3","PG13"),
+    new Movie("Movie4","Studio4","PG"),
+    
+];
+const pgMovieArray = Movie.getPG(moviesArray);
+console.log(`Title: ${ForestGump.title}`);
+console.log(`studio: ${ForestGump.studio}`);
+console.log(`Rating: ${ForestGump.rating}`);
+console.log();
+for(let i=0; i< pgMovieArray.length;i++){
+    console.log(`Title:${pgMovieArray[i].title}, studio:${pgMovieArray[i].studio}, rating:${pgMovieArray[i].rating}`)
+}
+    
+
