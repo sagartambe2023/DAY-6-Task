@@ -1,0 +1,16 @@
+class Person{
+    constructor(n,g,a,c){
+        this.name =n;
+        this.gender =g;
+        this.address= a;
+        this.contact =c;
+    }
+
+    getAllDetails(){
+        console.log(`Name:${this.name}, Gender: ${this.gender}, Address: ${this.address}, Contact : ${this.contact}`)
+        return
+    }
+}
+
+const person1 =new Person("Sagar Tambe","Male","Pune","8975910317");
+person1.getAllDetails();
