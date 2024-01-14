@@ -1,0 +1,49 @@
+class Circle{
+    constructor(r,col){
+        this.radius =r;
+        this.color =col;
+    }
+   getRadius(){
+       console.log(`the radius is ${this.radius}`);
+    return 
+   } 
+   getColor(){
+    console.log(`the radius is ${this.color}`);
+    return 
+    } 
+
+    setRadius(newradius){
+        this.radius= newradius;
+        return 
+    }
+    setColor(newcolor){
+        this.color= newcolor;
+        return 
+    }
+    getArea(){
+        var area= Math.PI*Math.pow(`${this.radius}`,2);
+        console.log(`The area of Circle is ${area}`);
+        return
+    }
+    getCircumference(){
+        var cir = 2*Math.PI*(`${this.radius}`);
+        console.log(`The area of Circle is ${cir}`);
+        return
+    }
+}
+const circle1 = new Circle(1.0,"red");
+const circle2 = new Circle(2.0,"green");
+const circle3 = new Circle(3.0,"blue");
+const circle4 = new Circle(4.0,"White");
+circle1.getRadius();
+circle2.getColor();
+circle3.getArea();
+circle4.getCircumference();
+circle1.setRadius(5.0);
+circle1.setColor("Purple");
+console.log(circle1.radius);
+console.log(circle1.color);
+
+
+
+
