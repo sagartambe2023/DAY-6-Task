@@ -1,0 +1,19 @@
+class UberPriceCalculator {
+    constructor(baseFare, perMinuteRate, perKiloMeterRate) {
+      this.baseFare = baseFare;
+      this.perMinuteRate = perMinuteRate;
+      this.perKiloMeterRate = perKiloMeterRate;
+    }
+  
+    calculatePrice(distance, duration) {
+      const fare = this.baseFare + (this.perMinuteRate * duration) + (this.perKiloMeterRate * distance);
+      console.log(`The estimated Uber price is ${fare.toFixed(2)}`);
+      return;
+    }
+  }
+  
+  const uberCalculator = new UberPriceCalculator(5, 0.2, 1.5);
+   
+  uberCalculator.calculatePrice(10,15);
+  
+  
